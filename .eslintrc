@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "standard",
+    "standard-react",
+    "standard-with-typescript",
+    "plugin:prettier/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "rules": {
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/consistent-type-definitions": 0,
+        "@typescript-eslint/triple-slash-reference": 0,
+        "@typescript-eslint/no-non-null-assertion": 0
+      },
+      "parserOptions": {
+        "project": "./tsconfig.json",
+        "sourceType": "module",
+        "createDefaultProgram": true
+      }
+    }
+  ]
+}
